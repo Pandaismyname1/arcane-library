@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guides · Arcane Library</title>
+<meta name="description" content="How to play Arcane Library: getting started, learning enchantments, a roll calculator, navigating the Library, surviving the keepers, beating the Archivist and modpack notes.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guides · Arcane Library">
+<meta property="og:description" content="How to play Arcane Library: getting started, learning enchantments, a roll calculator, navigating the Library, surviving the keepers, beating the Archivist and modpack notes.">
+<meta property="og:image" content="https://pandaismyname1.github.io/arcane-library/img/social.png">
+<meta property="og:url" content="https://pandaismyname1.github.io/arcane-library/guides.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d0b14">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><img src="img/tex/lumen_dust.png" alt="">Arcane Library</a>
+<button class="menu-btn" aria-label="Menu" aria-expanded="false">Menu</button>
+<nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="description.html">Description</a><a href="showcase.html">Showcase</a><a href="bestiary.html">Bestiary</a><a href="recipes.html">Recipes</a><a href="guides.html" aria-current="page">Guides</a><a href="https://github.com/Pandaismyname1/arcane-library" rel="noopener">GitHub</a></nav>
+</div></header>
+<main id="main">
+<div class="pagehead"><div class="wrap"><div class="eyebrow">Guides</div><h1>How to play</h1><p>From your first tower to the Archivist's final chapter.</p></div></div>
+<div class="wrap with-toc">
+<nav class="toc" aria-label="On this page"><a href="#getting-started">Getting started</a><a href="#learning">Learning enchantments</a><a href="#calculator">Roll calculator</a><a href="#deconstructing">Deconstructing gear</a><a href="#library-nav">Navigating the Library</a><a href="#keepers">Surviving the keepers</a><a href="#archivist-fight">Beating the Archivist</a><a href="#modpacks">Modpacks and servers</a><a href="#faq">FAQ</a></nav>
+<div>
+<h2 id="getting-started">Getting started</h2>
+<ol class="steps">
+<li><b>Find a Ruined Librarian Tower.</b> It generates in the Overworld in plains, forests, taiga, snowy plains, savanna, desert, swamps, meadows and cherry groves. A broken portal frame stands beside it.</li>
+<li><b>Open the top-floor chest.</b> It holds a Book of Portals, Lumen Dust, Inscribed Bricks, Ink Vials, a Codex and your first tome. Brush the dusty bookshelves in the tower too.</li>
+<li><b>Build the frame.</b> Inscribed Bricks, upright like a Nether portal, from 2 &times; 3 up to 21 &times; 21 inside (corners optional). Craft more bricks from stone bricks and Lumen Dust.</li>
+<li><b>Use the Book of Portals on the frame</b> and step in. Standing in the portal takes a moment (<code>portalDelayTicks</code> in the config).</li>
+<li><b>Study your first tome</b> (hold use for 2.5 seconds), then craft an <b>Arcane Lectern</b> or find one in a Library reading room.</li>
+</ol>
+<div class="callout"><p><b>Build your portal near the Overworld's centre</b> (within about 96 blocks) to land in the heart of the Library. A portal built farther out opens straight into the dangerous Restricted Section.</p></div>
+
+<h2 id="learning">Learning enchantments</h2>
+<p>Loot tomes from Library chests, vaults and suspicious bookshelves. <b>Hold use</b> to study one. The tier is the mastery it grants: Glimpsed (1 refinement, +0), Studied (2, +8), Mastered (3, +16).
+A tome that teaches nothing new isn't consumed, so it's safe to keep spare ones for trading or giving away.</p>
+<p>Open the <b>Codex of the Learned</b> to see everything you know. It can search, filter by tier, show which mod an enchantment comes from, and show your odds of full power.</p>
+<p>Knowledge is per player and stays after death. Mastered tomes are the rare prize of vaults in the Restricted Section and the Archivist.</p>
+
+<h2 id="calculator">Roll calculator</h2>
+<p>At the Lectern the roll is <code>score = clamp(d100 + bonus, 1, 100)</code>, then <code>power = ceil(score &times; max level / 100)</code>. Each refinement rolls again and keeps the higher result.
+This calculator uses the same maths as the mod.</p>
+<div class="calc" id="calc">
+<div class="row">
+<label>Enchantment max level<select id="c-max">
+<option value="1">I (max 1)</option><option value="2">II (max 2)</option><option value="3">III (max 3)</option><option value="4">IV (max 4)</option><option value="5" selected>V (max 5)</option><option value="10">X (max 10)</option></select></label>
+<label>Your mastery<select id="c-mast"><option value="1">Glimpsed (+0, 1 refinement)</option><option value="2">Studied (+8, 2 refinements)</option><option value="3" selected>Mastered (+16, 3 refinements)</option></select></label>
+<label class="chk"><input type="checkbox" id="c-quill"> Quill of Insight (+6, +1 refinement)</label>
+<label class="chk"><input type="checkbox" id="c-rare"> Rare enchantment (+2 dust)</label>
+</div>
+<div class="bars" aria-live="polite"></div>
+<div class="out"></div>
+</div>
+<p>Two tips: the roll only decides power, and there is no failure that wastes the item or the tome. A Quill of Insight is worth carrying to every serious inscription.</p>
+
+<h2 id="deconstructing">Deconstructing gear</h2>
+<p>Put an enchanted item or book in the <b>Deconstruction Table</b>. It is destroyed, and you learn what it carried: unknown enchantments become <b>Glimpsed</b>; Glimpsed ones become <b>Studied</b> if the item had them at level III or higher (or at their maximum).
+You get <b>3 dust per enchantment level back</b> (3 to 36). Mastery only comes from Mastered tomes, so deconstruction is the fast way to <i>learn</i> something, not to master it.</p>
+<p>Gate halls in the Library have a Deconstruction Table, so you can salvage loot without leaving.</p>
+
+<h2 id="library-nav">Navigating the Library</h2>
+<ul>
+<li><b>Gate halls</b> sit on a fixed grid every 8 cells plus about one in 20 other cells. Each has a lit return portal.</li>
+<li><b>Every Library portal returns you to the portal you entered by</b>, rebuilt in place if it's gone. With none on record, you return to your respawn point, else world spawn.</li>
+<li><b>Reading rooms</b> have a free Arcane Lectern: carry gear and dust and inscribe on the spot.</li>
+<li><b>Vaults have no door.</b> Look for the hidden gap in the wall.</li>
+<li>The <b>Archivist's Bookmark</b> marks a spot and recalls you to it (same dimension, 60-second cooldown).</li>
+<li>Monsters spawn at any light level, beds don't work, and the clock never moves. Bring food and a way back.</li>
+<li>Past the <b>fourth ring</b> of rooms you're in the <b>Restricted Section</b>: darker, richer vaults, harder keepers.</li>
+</ul>
+
+<h2 id="keepers">Surviving the keepers</h2>
+<ul>
+<li><b>Silent Librarians</b> are neutral until you take a tome from a chest or shelf nearby. Know which variant you're facing before you take one.</li>
+<li><b>Gargoyles:</b> a Granite one only moves when unwatched. Marble pounces (it tells first). Obsidian deflects arrows, so use melee.</li>
+<li><b>Bookwyrms</b> rattle before they burst out of a shelf. A Glossy one shrugs off hits from the front.</li>
+<li><b>Inklings:</b> back away from a swelling Red one. Black ones split, so keep moving.</li>
+<li><b>Vault Wards</b> are stationary. A Warden of Keys seals a vault's chests until it falls.</li>
+<li><b>Tome Mimics</b> sleep as a book. A Ledger swallows your items, so don't wake one with a full inventory you care about.</li>
+</ul>
+<p>The full list is in the <a href="bestiary.html">Bestiary</a>.</p>
+
+<h2 id="archivist-fight">Beating the Archivist</h2>
+<p>The Archivist has 360 health and three phases. Every attack is telegraphed.</p>
+<ol class="steps">
+<li><b>Page Storm.</b> Aim lines appear and lock before the volley. Sidestep the locked lines.</li>
+<li><b>Erasure.</b> Marked floor bands are wiped by a wave that deletes placed blocks and your longest-lasting buff. Step off the marked bands.</li>
+<li><b>Recall and Page Slam.</b> A tether pulls you to the dais. Break line of sight behind a pillar to snap it and stagger the boss, or run out of the flame ring.</li>
+<li><b>The Index.</b> Summoned Vault Wards shield the Archivist until they're destroyed. Kill the wards first.</li>
+</ol>
+<p>It drops Mastered tomes, exclusive tomes, a pile of Lumen Dust, the Archivist's Seal and the Archivist's Bookmark.</p>
+
+<h2 id="modpacks">Modpacks and servers</h2>
+<div class="callout warn"><p><b>Modpacks must use the <a href="https://www.curseforge.com/minecraft/mc-mods/arcane-library" rel="noopener">CurseForge download</a>, not the GitHub one.</b> Reference the CurseForge project in your pack manifest. The GitHub jars are for manual installs and testing only.</p></div>
+<p>Everything reads the enchantment registry, so enchantments from other mods can be learned, inscribed, deconstructed and browsed in the Codex. Tomes for them drop automatically:
+<code>#minecraft:treasure</code> goes to the rare pool, weight 5 or more to the common pool, the rest to the uncommon pool. Curses never drop. Codex descriptions use the <code>enchantment.&lt;mod&gt;.&lt;name&gt;.desc</code> key many mods already ship.</p>
+<table><thead><tr><th>Enchantment tag</th><th>Effect</th></tr></thead><tbody>
+<tr><td><code>arcane:tome_pool/common</code></td><td>put in the common tome pool</td></tr>
+<tr><td><code>arcane:tome_pool/uncommon</code></td><td>put in the uncommon pool</td></tr>
+<tr><td><code>arcane:tome_pool/rare</code></td><td>put in the rare pool</td></tr>
+<tr><td><code>arcane:tome_pool/exclusive</code></td><td>exclusive pool</td></tr>
+<tr><td><code>arcane:tome_pool/excluded</code></td><td>never drops as a tome</td></tr></tbody></table>
+<p><b>Config</b> (<code>config/arcane-synced.toml</code>): <code>disableVanillaEnchantingTable</code>, <code>inkBoundIntervalTicks</code>, <code>portalDelayTicks</code>.<br>
+<b>Commands</b> (operators): <code>/arcane knowledge learn | forget | learnall | reset | list</code>.<br>
+<b>Servers:</b> install the mod on the server and on every client.</p>
+
+<h2 id="faq">FAQ</h2>
+<details><summary>Does it need other mods?</summary><p>No. Arcane Library has no dependencies besides NeoForge.</p></details>
+<details><summary>The enchanting table doesn't work!</summary><p>The vanilla enchanting table is disabled by default. Set <code>disableVanillaEnchantingTable</code> to <code>false</code> in <code>config/arcane-synced.toml</code> to bring it back. Anvils, grindstones, enchanted books and villager trades are untouched.</p></details>
+<details><summary>I can't find a Ruined Librarian Tower.</summary><p>It generates in plains, forests, taiga, snowy plains, savanna, desert, swamps, meadows and cherry groves. Explore those biomes in the Overworld. A tower includes a broken portal frame beside it.</p></details>
+<details><summary>My portal opened somewhere scary.</summary><p>A portal farther than about 96 blocks from the Overworld's centre opens straight into the Restricted Section. Build closer to the centre for the heart of the Library.</p></details>
+<details><summary>Can I lose my knowledge?</summary><p>Not by dying: it's per player and kept on death. Operators can change it with <code>/arcane knowledge</code>.</p></details>
+<details><summary>Does a tome that teaches nothing get used up?</summary><p>No. Mastery only rises, and a tome that would teach you nothing new is not used.</p></details>
+<details><summary>Where do I report bugs or ask questions?</summary><p>Bugs, crashes, mod conflicts and performance problems go to the <a href="https://github.com/Pandaismyname1/arcane-library/issues/new/choose">issue forms</a>. Questions, ideas and finds go to <a href="https://github.com/Pandaismyname1/arcane-library/discussions">Discussions</a>.</p></details>
+</div>
+</div>
+
+</main>
+<footer><div class="wrap cols">
+<div><b>Arcane Library</b><br>A NeoForge mod for Minecraft 26.3.<br>Developed with the help of AI.</div>
+<div><ul><li><a href="index.html">Home</a></li><li><a href="description.html">Description</a></li><li><a href="showcase.html">Showcase</a></li><li><a href="bestiary.html">Bestiary</a></li><li><a href="recipes.html">Recipes</a></li><li><a href="guides.html">Guides</a></li></ul></div>
+<div><ul>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/arcane-library" rel="noopener">Download on CurseForge</a></li>
+<li><a href="https://github.com/Pandaismyname1/arcane-library/releases">GitHub Releases (manual installs)</a></li>
+<li><a href="https://github.com/Pandaismyname1/arcane-library">Source code</a></li>
+<li><a href="https://github.com/Pandaismyname1/arcane-library/issues/new/choose">Report a bug</a></li>
+<li><a href="https://github.com/Pandaismyname1/arcane-library/discussions">Discussions</a></li>
+</ul></div>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

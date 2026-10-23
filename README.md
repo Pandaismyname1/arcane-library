@@ -2,7 +2,9 @@
 
 [![Build](https://github.com/Pandaismyname1/arcane-library/actions/workflows/build.yml/badge.svg)](https://github.com/Pandaismyname1/arcane-library/actions/workflows/build.yml)
 
-A NeoForge 26.3 mod (Minecraft 26.3, NeoForge 26.3.0.89, Java 25).
+**Website: https://pandaismyname1.github.io/arcane-library/** (description, showcase, bestiary, recipes, guides)
+
+A Minecraft 26.3 mod for NeoForge (26.3.0.89) and Fabric (Fabric API 0.161.0), Java 25.
 
 Vanilla enchanting is a slot machine. Here **knowledge picks the enchantment, a roll picks its power, and effort
 improves the roll.** You earn the *what* by exploring the Arcane Library, an endless dimension of living stacks, and
@@ -78,17 +80,31 @@ JDK 25 is required. This project was built with Temurin 25 at `C:/dev/jdk25-dl/j
 ```
 
 ```bash
-./gradlew runGameTestServer
+./gradlew :neoforge:runGameTestServer
 ```
 
 ```bash
-./gradlew runClient
+./gradlew :neoforge:runClient
 ```
+
+```bash
+./gradlew :fabric:runClient
+```
+
+The project is an Architectury multi-loader build: `common` holds the mod (content, logic, client code) with no loader
+code, `neoforge` and `fabric` hold each loader's entry points, platform service (`ArcanePlatform`) and event wiring.
+`./gradlew build` makes `neoforge/build/libs/arcane-<version>-neoforge.jar` and
+`fabric/build/libs/arcane-<version>-fabric.jar` (needs Fabric API). Access wideners live in
+`common/src/main/resources/arcane.accesswidener`; NeoForge's access transformer is generated from it.
 
 ## Releasing
 
 Push a tag such as `v0.2.0` (`-alpha`/`-beta`/`-rc` in the name marks a pre-release). The Release workflow builds,
-runs the tests and GameTests, then publishes the jar to CurseForge and GitHub Releases. It needs the repository secret
+runs the tests and GameTests, then publishes the NeoForge and Fabric jars to CurseForge and GitHub Releases. It needs the repository secret
 `PUBLISH_CURSEFORGE_TOKEN` and the repository variable `CURSEFORGE_PROJECT_ID`. Bugs go to the issue forms; questions,
 ideas and finds to Discussions.
+
+## Website
+
+`site/` is the GitHub Pages site, deployed by `.github/workflows/pages.yml` (set Settings > Pages > Source to GitHub Actions once).
 

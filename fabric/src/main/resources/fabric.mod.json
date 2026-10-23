@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "contact": {
+    "homepage": "https://pandaismyname1.github.io/arcane-library/",
+    "sources": "https://github.com/Pandaismyname1/arcane-library",
+    "issues": "https://github.com/Pandaismyname1/arcane-library/issues"
+  },
+  "license": "${mod_license}",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.panda.arcane.fabric.ArcaneFabric"
+    ],
+    "client": [
+      "com.panda.arcane.fabric.client.ArcaneFabricClient"
+    ]
+  },
+  "accessWidener": "arcane.accesswidener",
+  "mixins": [
+    "arcane.mixins.json",
+    "arcane-fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": ">=${fabric_api_min}",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=25"
+  }
+}

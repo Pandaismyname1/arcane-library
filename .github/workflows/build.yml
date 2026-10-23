@@ -31,11 +31,13 @@ jobs:
       - name: Build and unit tests
         run: ./gradlew build --stacktrace
 
-      - name: GameTests
-        run: ./gradlew runGameTestServer --stacktrace
+      - name: GameTests (NeoForge)
+        run: ./gradlew :neoforge:runGameTestServer --stacktrace
 
       - uses: actions/upload-artifact@v4
         with:
           name: arcane-${{ github.sha }}
-          path: build/libs/*.jar
+          path: |
+            neoforge/build/libs/*-neoforge.jar
+            fabric/build/libs/*-fabric.jar
           if-no-files-found: error

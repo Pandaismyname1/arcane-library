@@ -51,7 +51,7 @@ jobs:
       - name: Build and test
         run: |
           ./gradlew build -Pmod_version=${{ steps.version.outputs.version }} --stacktrace
-          ./gradlew runGameTestServer -Pmod_version=${{ steps.version.outputs.version }} --stacktrace
+          ./gradlew :neoforge:runGameTestServer -Pmod_version=${{ steps.version.outputs.version }} --stacktrace
 
       - name: Check CurseForge settings
         if: env.CURSEFORGE_TOKEN == '' || env.CURSEFORGE_PROJECT_ID == ''
@@ -59,7 +59,8 @@ jobs:
           echo "::error::Set the secret PUBLISH_CURSEFORGE_TOKEN and the variable CURSEFORGE_PROJECT_ID (Settings > Secrets and variables > Actions)."
           exit 1
 
-      - name: Publish to CurseForge and GitHub
+      # one CurseForge file per loader, both attached to the same GitHub release
+      - name: Publish the NeoForge jar
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           curseforge-id: ${{ env.CURSEFORGE_PROJECT_ID }}
@@ -67,10 +68,28 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           github-tag: v${{ steps.version.outputs.version }}
           github-generate-changelog: true
-          files: build/libs/arcane-${{ steps.version.outputs.version }}.jar
-          name: Arcane Library ${{ steps.version.outputs.version }}
-          version: ${{ steps.version.outputs.version }}
+          files: neoforge/build/libs/arcane-${{ steps.version.outputs.version }}-neoforge.jar
+          name: Arcane Library ${{ steps.version.outputs.version }} (NeoForge)
+          version: ${{ steps.version.outputs.version }}+neoforge
           version-type: ${{ steps.version.outputs.type }}
           loaders: neoforge
           game-versions: ${{ steps.version.outputs.mc }}
           java: 25
+
+      - name: Publish the Fabric jar
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          curseforge-id: ${{ env.CURSEFORGE_PROJECT_ID }}
+          curseforge-token: ${{ env.CURSEFORGE_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-tag: v${{ steps.version.outputs.version }}
+          github-generate-changelog: true
+          files: fabric/build/libs/arcane-${{ steps.version.outputs.version }}-fabric.jar
+          name: Arcane Library ${{ steps.version.outputs.version }} (Fabric)
+          version: ${{ steps.version.outputs.version }}+fabric
+          version-type: ${{ steps.version.outputs.type }}
+          loaders: fabric
+          game-versions: ${{ steps.version.outputs.mc }}
+          java: 25
+          dependencies: |
+            fabric-api(required){curseforge:306612}

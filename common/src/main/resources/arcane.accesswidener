@@ -1,0 +1,11 @@
+accessWidener	v2	official
+
+accessible class net/minecraft/world/inventory/MenuType$MenuSupplier
+accessible method net/minecraft/world/inventory/MenuType <init> (Lnet/minecraft/world/inventory/MenuType$MenuSupplier;Lnet/minecraft/world/flag/FeatureFlagSet;)V
+accessible method net/minecraft/core/particles/SimpleParticleType <init> (Z)V
+accessible class net/minecraft/world/item/CreativeModeTab$Output
+accessible method net/minecraft/client/particle/FlyTowardsPositionParticle <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDDZLnet/minecraft/client/particle/Particle$LifetimeAlpha;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
+# Fabric: registrations vanilla keeps private and Fabric API doesn't wrap (NeoForge has events for them)
+accessible class net/minecraft/client/gui/screens/MenuScreens$ScreenConstructor
+accessible method net/minecraft/client/gui/screens/MenuScreens register (Lnet/minecraft/world/inventory/MenuType;Lnet/minecraft/client/gui/screens/MenuScreens$ScreenConstructor;)V
+accessible method net/minecraft/world/entity/SpawnPlacements register (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/SpawnPlacementType;Lnet/minecraft/world/level/levelgen/Heightmap$Types;Lnet/minecraft/world/entity/SpawnPlacements$SpawnPredicate;)V
