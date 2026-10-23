@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "arcane:event",
+      "conditions": {
+        "event": "learned"
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "arcane:tome_glimpsed"
+    },
+    "title": {
+      "translate": "advancements.arcane.study.title"
+    },
+    "description": {
+      "translate": "advancements.arcane.study.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "arcane:library"
+}

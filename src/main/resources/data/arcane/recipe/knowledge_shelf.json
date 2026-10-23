@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bookshelf",
+    "arcane:lumen_dust"
+  ],
+  "result": {
+    "id": "arcane:knowledge_shelf",
+    "count": 1
+  }
+}

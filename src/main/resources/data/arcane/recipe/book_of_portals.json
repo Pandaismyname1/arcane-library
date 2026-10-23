@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "arcane:inscribed_bricks",
+    "V": "arcane:ink_vial",
+    "B": "minecraft:book",
+    "D": "arcane:lumen_dust"
+  },
+  "pattern": [
+    "IVI",
+    "BDB",
+    "III"
+  ],
+  "result": {
+    "id": "arcane:book_of_portals",
+    "count": 1
+  }
+}

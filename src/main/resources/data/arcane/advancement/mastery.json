@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "arcane:event",
+      "conditions": {
+        "event": "learned",
+        "value": {
+          "min": 3
+        }
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "arcane:tome_mastered"
+    },
+    "title": {
+      "translate": "advancements.arcane.mastery.title"
+    },
+    "description": {
+      "translate": "advancements.arcane.mastery.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "arcane:study"
+}

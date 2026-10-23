@@ -1,0 +1,747 @@
+{
+  "lectern.roll": {
+    "sounds": [
+      {
+        "name": "minecraft:block.amethyst_block.chime",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ],
+    "subtitle": "subtitles.arcane.lectern.roll"
+  },
+  "lectern.max": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.player.levelup",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 1.2
+      }
+    ],
+    "subtitle": "subtitles.arcane.lectern.max"
+  },
+  "tome.study": {
+    "sounds": [
+      {
+        "name": "minecraft:block.beacon.power_select",
+        "type": "event",
+        "volume": 0.7,
+        "pitch": 1.4
+      }
+    ],
+    "subtitle": "subtitles.arcane.tome.study"
+  },
+  "portal.ambient": {
+    "sounds": [
+      {
+        "name": "minecraft:block.portal.ambient",
+        "type": "event",
+        "volume": 0.5,
+        "pitch": 1.3
+      }
+    ],
+    "subtitle": "subtitles.arcane.portal.ambient"
+  },
+  "portal.travel": {
+    "sounds": [
+      {
+        "name": "minecraft:block.portal.travel",
+        "type": "event",
+        "volume": 0.4,
+        "pitch": 1.4
+      }
+    ],
+    "subtitle": "subtitles.arcane.portal.travel"
+  },
+  "moth.flutter": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.bat.takeoff",
+        "type": "event",
+        "volume": 0.5,
+        "pitch": 1.6
+      }
+    ],
+    "subtitle": "subtitles.arcane.moth.flutter"
+  },
+  "librarian.hush": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.villager.no",
+        "type": "event",
+        "volume": 0.6,
+        "pitch": 0.6
+      }
+    ],
+    "subtitle": "subtitles.arcane.librarian.hush"
+  },
+  "ink_golem.step": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.iron_golem.step",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 0.6
+      }
+    ],
+    "subtitle": "subtitles.arcane.ink_golem.step"
+  },
+  "vault_ward.zap": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker.cast_spell",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.4
+      }
+    ],
+    "subtitle": "subtitles.arcane.vault_ward.zap"
+  },
+  "archivist.ambient": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.wither.ambient",
+        "type": "event",
+        "volume": 0.6,
+        "pitch": 1.4
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.ambient"
+  },
+  "archivist.slam": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.generic.explode",
+        "type": "event",
+        "volume": 0.7,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.slam"
+  },
+  "archivist.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.wither.death",
+        "type": "event",
+        "volume": 0.5,
+        "pitch": 1.5
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.death"
+  },
+  "archivist.storm_charge": {
+    "sounds": [
+      {
+        "name": "minecraft:block.enchantment_table.use",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.6
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.storm_charge"
+  },
+  "archivist.storm_lock": {
+    "sounds": [
+      {
+        "name": "minecraft:block.amethyst_block.resonate",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.storm_lock"
+  },
+  "archivist.storm_release": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker.cast_spell",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.storm_release"
+  },
+  "archivist.erase_charge": {
+    "sounds": [
+      {
+        "name": "minecraft:block.grindstone.use",
+        "type": "event",
+        "volume": 0.9,
+        "pitch": 1.5
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.erase_charge"
+  },
+  "archivist.erase": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.breeze.wind_burst",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.6
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.erase"
+  },
+  "archivist.recall_charge": {
+    "sounds": [
+      {
+        "name": "minecraft:block.bell.resonate",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.recall_charge"
+  },
+  "archivist.recall_pull": {
+    "sounds": [
+      {
+        "name": "minecraft:item.trident.return",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.6
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.recall_pull"
+  },
+  "archivist.tether_snap": {
+    "sounds": [
+      {
+        "name": "minecraft:block.chain.break",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.tether_snap"
+  },
+  "archivist.slam_charge": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker.prepare_attack",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.6
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.slam_charge"
+  },
+  "archivist.index": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker.prepare_summon",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.index"
+  },
+  "archivist.phase": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.wither.spawn",
+        "type": "event",
+        "volume": 0.6,
+        "pitch": 1.4
+      }
+    ],
+    "subtitle": "subtitles.arcane.archivist.phase"
+  },
+  "bookmark.use": {
+    "sounds": [
+      {
+        "name": "minecraft:item.book.page_turn",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookmark.use"
+  },
+  "archivist.music": {
+    "sounds": [
+      {
+        "name": "minecraft:music/game/ancestry",
+        "stream": true,
+        "volume": 0.8
+      },
+      {
+        "name": "minecraft:music/game/deeper",
+        "stream": true,
+        "volume": 0.8
+      }
+    ]
+  },
+  "page_wraith.flutter": {
+    "sounds": [
+      {
+        "name": "minecraft:item.book.page_turn",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 1.2
+      },
+      {
+        "name": "minecraft:entity.phantom.flap",
+        "type": "event",
+        "volume": 0.5,
+        "pitch": 1.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.page_wraith.flutter"
+  },
+  "page_wraith.whisper": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.vex.ambient",
+        "type": "event",
+        "volume": 0.5,
+        "pitch": 0.6
+      }
+    ],
+    "subtitle": "subtitles.arcane.page_wraith.whisper"
+  },
+  "page_wraith.tell": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.vex.charge",
+        "type": "event",
+        "volume": 0.9,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.page_wraith.tell"
+  },
+  "page_wraith.dive": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.phantom.swoop",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.5
+      }
+    ],
+    "subtitle": "subtitles.arcane.page_wraith.dive"
+  },
+  "page_wraith.hurt": {
+    "sounds": [
+      {
+        "name": "minecraft:item.book.put",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.0
+      },
+      {
+        "name": "minecraft:entity.vex.hurt",
+        "type": "event",
+        "volume": 0.7,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.page_wraith.hurt"
+  },
+  "page_wraith.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.vex.death",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.page_wraith.death"
+  },
+  "page_wraith.ward": {
+    "sounds": [
+      {
+        "name": "minecraft:block.amethyst_block.chime",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.page_wraith.ward"
+  },
+  "page_wraith.copy": {
+    "sounds": [
+      {
+        "name": "minecraft:block.enchantment_table.use",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.3
+      }
+    ],
+    "subtitle": "subtitles.arcane.page_wraith.copy"
+  },
+  "tome_mimic.wake": {
+    "sounds": [
+      {
+        "name": "minecraft:block.chest.open",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.tome_mimic.wake"
+  },
+  "tome_mimic.settle": {
+    "sounds": [
+      {
+        "name": "minecraft:block.chest.close",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 0.9
+      }
+    ],
+    "subtitle": "subtitles.arcane.tome_mimic.settle"
+  },
+  "tome_mimic.bite": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker_fangs.attack",
+        "type": "event",
+        "volume": 0.9,
+        "pitch": 1.4
+      }
+    ],
+    "subtitle": "subtitles.arcane.tome_mimic.bite"
+  },
+  "tome_mimic.chatter": {
+    "sounds": [
+      {
+        "name": "minecraft:item.book.page_turn",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 0.6
+      },
+      {
+        "name": "minecraft:block.chiseled_bookshelf.insert",
+        "type": "event",
+        "volume": 0.6,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.tome_mimic.chatter"
+  },
+  "tome_mimic.cast": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker.cast_spell",
+        "type": "event",
+        "volume": 0.9,
+        "pitch": 1.2
+      }
+    ],
+    "subtitle": "subtitles.arcane.tome_mimic.cast"
+  },
+  "tome_mimic.gulp": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.player.burp",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.tome_mimic.gulp"
+  },
+  "tome_mimic.hurt": {
+    "sounds": [
+      {
+        "name": "minecraft:block.chiseled_bookshelf.hit",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.8
+      },
+      {
+        "name": "minecraft:item.book.put",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.tome_mimic.hurt"
+  },
+  "tome_mimic.death": {
+    "sounds": [
+      {
+        "name": "minecraft:block.chiseled_bookshelf.break",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.tome_mimic.death"
+  },
+  "bookwyrm.ambient": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.silverfish.ambient",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 0.5
+      },
+      {
+        "name": "minecraft:item.book.page_turn",
+        "type": "event",
+        "volume": 0.7,
+        "pitch": 0.5
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookwyrm.ambient"
+  },
+  "bookwyrm.burrow": {
+    "sounds": [
+      {
+        "name": "minecraft:block.chiseled_bookshelf.pickup",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.6
+      },
+      {
+        "name": "minecraft:block.wood.break",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookwyrm.burrow"
+  },
+  "bookwyrm.emerge": {
+    "sounds": [
+      {
+        "name": "minecraft:block.chiseled_bookshelf.insert",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.6
+      },
+      {
+        "name": "minecraft:entity.evoker_fangs.attack",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookwyrm.emerge"
+  },
+  "bookwyrm.chew": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.generic.eat",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookwyrm.chew"
+  },
+  "bookwyrm.clank": {
+    "sounds": [
+      {
+        "name": "minecraft:block.anvil.land",
+        "type": "event",
+        "volume": 0.4,
+        "pitch": 1.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookwyrm.clank"
+  },
+  "bookwyrm.hurt": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.silverfish.hurt",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.6
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookwyrm.hurt"
+  },
+  "bookwyrm.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.silverfish.death",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.5
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookwyrm.death"
+  },
+  "quill_stalker.ambient": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.spider.ambient",
+        "type": "event",
+        "volume": 0.8,
+        "pitch": 1.3
+      }
+    ],
+    "subtitle": "subtitles.arcane.quill_stalker.ambient"
+  },
+  "quill_stalker.shoot": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.arrow.shoot",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.4
+      }
+    ],
+    "subtitle": "subtitles.arcane.quill_stalker.shoot"
+  },
+  "quill_stalker.scribble": {
+    "sounds": [
+      {
+        "name": "minecraft:item.book.page_turn",
+        "type": "event",
+        "volume": 0.7,
+        "pitch": 1.6
+      },
+      {
+        "name": "minecraft:item.brush.brushing.generic",
+        "type": "event",
+        "volume": 0.7,
+        "pitch": 1.5
+      }
+    ],
+    "subtitle": "subtitles.arcane.quill_stalker.scribble"
+  },
+  "quill_stalker.bite": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.evoker_fangs.attack",
+        "type": "event",
+        "volume": 0.6,
+        "pitch": 1.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.quill_stalker.bite"
+  },
+  "quill_stalker.hurt": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.spider.hurt",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.3
+      }
+    ],
+    "subtitle": "subtitles.arcane.quill_stalker.hurt"
+  },
+  "quill_stalker.death": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.spider.death",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 1.3
+      }
+    ],
+    "subtitle": "subtitles.arcane.quill_stalker.death"
+  },
+  "bookend_gargoyle.freeze": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.creaking.freeze",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookend_gargoyle.freeze"
+  },
+  "bookend_gargoyle.unfreeze": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.creaking.unfreeze",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookend_gargoyle.unfreeze"
+  },
+  "bookend_gargoyle.grind": {
+    "sounds": [
+      {
+        "name": "minecraft:block.grindstone.use",
+        "type": "event",
+        "volume": 0.5,
+        "pitch": 0.5
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookend_gargoyle.grind"
+  },
+  "bookend_gargoyle.pounce": {
+    "sounds": [
+      {
+        "name": "minecraft:entity.goat.long_jump",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.6
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookend_gargoyle.pounce"
+  },
+  "bookend_gargoyle.land": {
+    "sounds": [
+      {
+        "name": "minecraft:block.anvil.land",
+        "type": "event",
+        "volume": 0.5,
+        "pitch": 0.6
+      },
+      {
+        "name": "minecraft:block.stone.break",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookend_gargoyle.land"
+  },
+  "bookend_gargoyle.deflect": {
+    "sounds": [
+      {
+        "name": "minecraft:block.anvil.land",
+        "type": "event",
+        "volume": 0.4,
+        "pitch": 2.0
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookend_gargoyle.deflect"
+  },
+  "bookend_gargoyle.hurt": {
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.hit",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookend_gargoyle.hurt"
+  },
+  "bookend_gargoyle.death": {
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.break",
+        "type": "event",
+        "volume": 1.0,
+        "pitch": 0.5
+      },
+      {
+        "name": "minecraft:entity.creaking.death",
+        "type": "event",
+        "volume": 0.6,
+        "pitch": 0.8
+      }
+    ],
+    "subtitle": "subtitles.arcane.bookend_gargoyle.death"
+  }
+}

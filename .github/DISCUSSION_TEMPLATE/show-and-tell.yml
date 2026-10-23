@@ -1,0 +1,29 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share your finds: rare rooms, gear you inscribed, Archivist kills, builds in the Library, and modpacks with Arcane Library. Seeds and coordinates let others visit the same places.
+
+  - type: textarea
+    id: show
+    attributes:
+      label: What you'd like to share
+      description: Drag screenshots straight into this box.
+    validations:
+      required: true
+
+  - type: input
+    id: seed
+    attributes:
+      label: Seed and coordinates
+      placeholder: Seed 1111, an orrery at 152 9 -40 in the Library
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Arcane Library version
+      placeholder: 0.1.0
+    validations:
+      required: false

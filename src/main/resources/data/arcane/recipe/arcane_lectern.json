@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "arcane:lumen_dust",
+    "L": "minecraft:lectern",
+    "B": "arcane:inscribed_bricks"
+  },
+  "pattern": [
+    "DLD",
+    "BBB"
+  ],
+  "result": {
+    "id": "arcane:arcane_lectern",
+    "count": 1
+  }
+}

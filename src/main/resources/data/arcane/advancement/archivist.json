@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "arcane:event",
+      "conditions": {
+        "event": "slain_archivist"
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "arcane:archivists_seal"
+    },
+    "title": {
+      "translate": "advancements.arcane.archivist.title"
+    },
+    "description": {
+      "translate": "advancements.arcane.archivist.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "arcane:library"
+}

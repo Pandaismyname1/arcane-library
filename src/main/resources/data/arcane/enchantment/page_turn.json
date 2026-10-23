@@ -1,0 +1,35 @@
+{
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.arcane.page_turn"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "id": "arcane:enchantment.page_turn.speed",
+        "attribute": "minecraft:attack_speed",
+        "operation": "add_multiplied_base",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.08,
+          "per_level_above_first": 0.08
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 12
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 20,
+    "per_level_above_first": 12
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#minecraft:enchantable/melee_weapon",
+  "weight": 3,
+  "primary_items": "#minecraft:enchantable/melee_weapon"
+}

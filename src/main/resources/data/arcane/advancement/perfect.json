@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "arcane:event",
+      "conditions": {
+        "event": "inscribed_max"
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "arcane:quill_of_insight"
+    },
+    "title": {
+      "translate": "advancements.arcane.perfect.title"
+    },
+    "description": {
+      "translate": "advancements.arcane.perfect.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "arcane:lectern"
+}

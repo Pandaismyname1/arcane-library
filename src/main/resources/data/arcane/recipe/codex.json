@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:book",
+    "arcane:ink_vial",
+    "arcane:lumen_dust"
+  ],
+  "result": {
+    "id": "arcane:codex",
+    "count": 1
+  }
+}

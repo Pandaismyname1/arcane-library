@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "arcane:event",
+      "conditions": {
+        "event": "portal_lit"
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "arcane:chiseled_inscribed_bricks"
+    },
+    "title": {
+      "translate": "advancements.arcane.portal.title"
+    },
+    "description": {
+      "translate": "advancements.arcane.portal.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "arcane:book"
+}

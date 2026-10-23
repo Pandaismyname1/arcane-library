@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:tick",
+      "conditions": {}
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "arcane:codex"
+    },
+    "title": {
+      "translate": "advancements.arcane.root.title"
+    },
+    "description": {
+      "translate": "advancements.arcane.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "background": "minecraft:gui/advancements/backgrounds/stone"
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ]
+}

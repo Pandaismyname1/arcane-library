@@ -1,0 +1,10 @@
+{
+  "type": "arcane:library",
+  "generator": {
+    "type": "arcane:library",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "arcane:stacks"
+    }
+  }
+}

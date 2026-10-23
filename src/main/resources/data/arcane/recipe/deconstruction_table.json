@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "arcane:lumen_dust",
+    "G": "minecraft:grindstone",
+    "B": "arcane:inscribed_bricks"
+  },
+  "pattern": [
+    "DGD",
+    "BBB"
+  ],
+  "result": {
+    "id": "arcane:deconstruction_table",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "dusted=0": {
+      "model": "arcane:block/suspicious_bookshelf_0"
+    },
+    "dusted=1": {
+      "model": "arcane:block/suspicious_bookshelf_1"
+    },
+    "dusted=2": {
+      "model": "arcane:block/suspicious_bookshelf_2"
+    },
+    "dusted=3": {
+      "model": "arcane:block/suspicious_bookshelf_3"
+    }
+  }
+}

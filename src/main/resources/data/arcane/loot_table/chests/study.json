@@ -1,0 +1,81 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arcane:lumen_dust",
+          "weight": 280,
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 6,
+              "max": 15
+            }
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 80,
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
+            }
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arcane:ink_vial",
+          "weight": 80,
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
+            }
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arcane:quill_of_insight",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arcane:tome_glimpsed",
+          "weight": 300,
+          "modifier": {
+            "type": "arcane:random_tome",
+            "category": "common"
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arcane:tome_studied",
+          "weight": 80,
+          "modifier": {
+            "type": "arcane:random_tome",
+            "category": "common"
+          }
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 80
+        }
+      ]
+    }
+  ],
+  "random_sequence": "arcane:chests/study"
+}

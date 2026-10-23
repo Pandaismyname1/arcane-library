@@ -1,0 +1,140 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arcane:book_of_portals",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arcane:lumen_dust",
+          "weight": 10,
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 30,
+              "max": 42
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arcane:inscribed_bricks",
+          "weight": 10,
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 20,
+              "max": 28
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arcane:ink_vial",
+          "weight": 10,
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arcane:tome_glimpsed",
+          "weight": 10,
+          "modifier": {
+            "type": "minecraft:set_components",
+            "components": {
+              "arcane:tome_enchantment": "minecraft:sharpness"
+            }
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arcane:tome_glimpsed",
+          "weight": 10,
+          "modifier": {
+            "type": "minecraft:set_components",
+            "components": {
+              "arcane:tome_enchantment": "minecraft:protection"
+            }
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arcane:tome_glimpsed",
+          "weight": 10,
+          "modifier": {
+            "type": "minecraft:set_components",
+            "components": {
+              "arcane:tome_enchantment": "minecraft:efficiency"
+            }
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arcane:tome_glimpsed",
+          "weight": 10,
+          "modifier": {
+            "type": "minecraft:set_components",
+            "components": {
+              "arcane:tome_enchantment": "minecraft:unbreaking"
+            }
+          }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arcane:tome_glimpsed",
+          "weight": 10,
+          "modifier": {
+            "type": "minecraft:set_components",
+            "components": {
+              "arcane:tome_enchantment": "minecraft:power"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arcane:codex",
+          "weight": 10
+        }
+      ]
+    }
+  ],
+  "random_sequence": "arcane:chests/tower"
+}

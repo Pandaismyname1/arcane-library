@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "arcane:lumen_dust",
+    "F": "minecraft:feather",
+    "V": "arcane:ink_vial"
+  },
+  "pattern": [
+    "D",
+    "F",
+    "V"
+  ],
+  "result": {
+    "id": "arcane:quill_of_insight",
+    "count": 1
+  }
+}

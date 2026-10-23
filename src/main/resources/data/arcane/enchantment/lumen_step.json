@@ -1,0 +1,45 @@
+{
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.arcane.lumen_step"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "id": "arcane:enchantment.lumen_step.speed",
+        "attribute": "minecraft:movement_speed",
+        "operation": "add_multiplied_base",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.07,
+          "per_level_above_first": 0.07
+        }
+      },
+      {
+        "id": "arcane:enchantment.lumen_step.step",
+        "attribute": "minecraft:step_height",
+        "operation": "add_value",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.3,
+          "per_level_above_first": 0.2
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 12
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 20,
+    "per_level_above_first": 12
+  },
+  "slots": [
+    "feet"
+  ],
+  "supported_items": "#minecraft:enchantable/foot_armor",
+  "weight": 1,
+  "primary_items": "#minecraft:enchantable/foot_armor"
+}

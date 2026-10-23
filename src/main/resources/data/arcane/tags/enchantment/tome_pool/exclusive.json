@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "arcane:lumen_step",
+      "required": false
+    },
+    {
+      "id": "arcane:page_turn",
+      "required": false
+    },
+    {
+      "id": "arcane:knowledge_leech",
+      "required": false
+    },
+    {
+      "id": "arcane:ink_bound",
+      "required": false
+    },
+    {
+      "id": "arcane:arcane_ward",
+      "required": false
+    },
+    {
+      "id": "arcane:lumen_edge",
+      "required": false
+    }
+  ]
+}

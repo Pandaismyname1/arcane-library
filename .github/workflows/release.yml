@@ -1,0 +1,76 @@
+name: Release
+
+# Push a tag like v0.2.0 (or v0.2.0-beta.1) to build, test and publish to CurseForge and GitHub Releases.
+# Needs the repository secret PUBLISH_CURSEFORGE_TOKEN and the repository variable CURSEFORGE_PROJECT_ID.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to publish (no leading v), e.g. 0.2.0
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      CURSEFORGE_TOKEN: ${{ secrets.PUBLISH_CURSEFORGE_TOKEN }}
+      CURSEFORGE_PROJECT_ID: ${{ vars.CURSEFORGE_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Work out the version
+        id: version
+        run: |
+          if [ -n "${{ inputs.version }}" ]; then v="${{ inputs.version }}"; else v="${GITHUB_REF_NAME#v}"; fi
+          case "$v" in
+            *alpha*) type=alpha ;;
+            *beta*|*rc*) type=beta ;;
+            *) type=release ;;
+          esac
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+          echo "type=$type" >> "$GITHUB_OUTPUT"
+          echo "mc=$(grep '^minecraft_version=' gradle.properties | cut -d= -f2)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 25
+
+      - name: Point Gradle at the runner's JDK
+        run: |
+          mkdir -p ~/.gradle
+          echo "org.gradle.java.home=$JAVA_HOME" >> ~/.gradle/gradle.properties
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build and test
+        run: |
+          ./gradlew build -Pmod_version=${{ steps.version.outputs.version }} --stacktrace
+          ./gradlew runGameTestServer -Pmod_version=${{ steps.version.outputs.version }} --stacktrace
+
+      - name: Check CurseForge settings
+        if: env.CURSEFORGE_TOKEN == '' || env.CURSEFORGE_PROJECT_ID == ''
+        run: |
+          echo "::error::Set the secret PUBLISH_CURSEFORGE_TOKEN and the variable CURSEFORGE_PROJECT_ID (Settings > Secrets and variables > Actions)."
+          exit 1
+
+      - name: Publish to CurseForge and GitHub
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          curseforge-id: ${{ env.CURSEFORGE_PROJECT_ID }}
+          curseforge-token: ${{ env.CURSEFORGE_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-tag: v${{ steps.version.outputs.version }}
+          github-generate-changelog: true
+          files: build/libs/arcane-${{ steps.version.outputs.version }}.jar
+          name: Arcane Library ${{ steps.version.outputs.version }}
+          version: ${{ steps.version.outputs.version }}
+          version-type: ${{ steps.version.outputs.type }}
+          loaders: neoforge
+          game-versions: ${{ steps.version.outputs.mc }}
+          java: 25

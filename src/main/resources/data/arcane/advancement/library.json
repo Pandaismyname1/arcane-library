@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "arcane:library"
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "arcane:knowledge_shelf"
+    },
+    "title": {
+      "translate": "advancements.arcane.library.title"
+    },
+    "description": {
+      "translate": "advancements.arcane.library.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "arcane:portal"
+}

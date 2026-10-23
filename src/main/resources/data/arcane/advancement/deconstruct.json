@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "arcane:event",
+      "conditions": {
+        "event": "deconstructed"
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "arcane:deconstruction_table"
+    },
+    "title": {
+      "translate": "advancements.arcane.deconstruct.title"
+    },
+    "description": {
+      "translate": "advancements.arcane.deconstruct.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "done"
+    ]
+  ],
+  "parent": "arcane:study"
+}

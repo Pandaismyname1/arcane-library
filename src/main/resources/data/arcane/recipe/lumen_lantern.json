@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "arcane:lumen_dust",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    " D ",
+    "DGD",
+    " D "
+  ],
+  "result": {
+    "id": "arcane:lumen_lantern",
+    "count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "arcane:block/library_portal_ns"
+    },
+    "axis=z": {
+      "model": "arcane:block/library_portal_ew"
+    }
+  }
+}

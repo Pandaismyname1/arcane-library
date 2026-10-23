@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "arcane:event",
+      "conditions": {
+        "event": "inscribed"
+      }
+    },
+    "done_max": {
+      "trigger": "arcane:event",
+      "conditions": {
+        "event": "inscribed_max"
+      }
+    }
+  },
+  "display": {
+    "icon": {
+      "id": "arcane:arcane_lectern"
+    },
+    "title": {
+      "translate": "advancements.arcane.lectern.title"
+    },
+    "description": {
+      "translate": "advancements.arcane.lectern.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "requirements": [
+    [
+      "done",
+      "done_max"
+    ]
+  ],
+  "parent": "arcane:study"
+}

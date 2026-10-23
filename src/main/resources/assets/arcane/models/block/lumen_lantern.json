@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "arcane:block/lumen_lantern_top",
+    "side": "arcane:block/lumen_lantern"
+  }
+}

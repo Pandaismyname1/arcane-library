@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arcane:chiseled_inscribed_bricks"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "arcane:blocks/chiseled_inscribed_bricks"
+}

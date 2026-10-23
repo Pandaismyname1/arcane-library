@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arcane:arcane_lectern"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "arcane:blocks/arcane_lectern"
+}
