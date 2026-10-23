@@ -8,6 +8,7 @@ import com.panda.arcane.client.ArcaneTooltips;
 import com.panda.arcane.client.ClientSinks;
 import com.panda.arcane.client.CodexScreen;
 import com.panda.arcane.client.DeconstructionScreen;
+import com.panda.arcane.client.DevExit;
 import com.panda.arcane.client.boss.ArchivistClient;
 import com.panda.arcane.client.creatures.CreatureLayers;
 import com.panda.arcane.client.mobsb.MobsBClient;
@@ -32,6 +33,7 @@ import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.event.SelectMusicEvent;
 import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.GameShuttingDownEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 
 /** The NeoForge client entry point: hands the common client registrations NeoForge's events. */
@@ -62,6 +64,7 @@ public final class ArcaneClient {
         modBus.addListener((RegisterGuiLayersEvent e) -> e.registerAbove(VanillaGuiLayers.CROSSHAIR, ArcaneFeedback.STUDY_LAYER, ArcaneFeedback::studyBar));
 
         NeoForge.EVENT_BUS.addListener((ClientTickEvent.Post e) -> ArcaneFeedback.onClientTick());
+        NeoForge.EVENT_BUS.addListener((GameShuttingDownEvent e) -> DevExit.onClientStopping());
         NeoForge.EVENT_BUS.addListener((ItemTooltipEvent e) -> ArcaneTooltips.onTooltip(e.getItemStack(), e.getEntity(), e.getFlags(), e.getToolTip()));
         NeoForge.EVENT_BUS.addListener((SelectMusicEvent e) -> {
             Music fight = ArchivistClient.music();

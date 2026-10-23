@@ -8,12 +8,14 @@ import com.panda.arcane.client.ArcaneTooltips;
 import com.panda.arcane.client.ClientSinks;
 import com.panda.arcane.client.CodexScreen;
 import com.panda.arcane.client.DeconstructionScreen;
+import com.panda.arcane.client.DevExit;
 import com.panda.arcane.client.boss.ArchivistClient;
 import com.panda.arcane.client.creatures.CreatureLayers;
 import com.panda.arcane.client.mobsb.MobsBClient;
 import com.panda.arcane.client.particle.ArcaneParticles;
 import com.panda.arcane.registry.ModMenus;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleProviderRegistry;
@@ -54,6 +56,7 @@ public final class ArcaneFabricClient implements ClientModInitializer {
         HudElementRegistry.attachElementAfter(VanillaHudElements.CROSSHAIR, ArcaneFeedback.STUDY_LAYER, ArcaneFeedback::studyBar);
 
         ClientTickEvents.END_CLIENT_TICK.register(mc -> ArcaneFeedback.onClientTick());
+        ClientLifecycleEvents.CLIENT_STOPPING.register(mc -> DevExit.onClientStopping());
         ItemTooltipCallback.EVENT.register((stack, context, flags, lines) -> ArcaneTooltips.onTooltip(stack, null, flags, lines));
         ArcaneMod.openCodex = () -> Minecraft.getInstance().gui.setScreen(new CodexScreen());
     }
