@@ -13,17 +13,22 @@ you earn the *how strong* at the Arcane Lectern by spending Lumen Dust.
 ## How it plays
 
 1. **Find a Ruined Librarian Tower** in the Overworld. Its top-floor chest holds a Book of Portals, Lumen Dust,
-   inscribed bricks and a first tome. A broken portal frame stands beside it as a hint.
-2. **Build a frame** of Inscribed Bricks (2 wide, 3 tall inside, any size up to 21x21) and use the Book of Portals on it.
+   inscribed bricks, ink vials, a Codex and a first (Glimpsed) tome. A broken portal frame stands beside it as a hint.
+2. **Build a frame** of Inscribed Bricks or Chiseled Inscribed Bricks (2 wide, 3 tall inside, any size up to 21x21
+   inside, corners optional) and use the Book of Portals on it (16 uses). You arrive at the Library gate hall nearest
+   your x/z: within about 96 blocks of Overworld 0,0 that is the central one, farther out it is in the Restricted Section.
 3. **Explore the Library.** Streets, stacks, reading rooms, studies, scriptoriums, atriums, vaults, two-storey galleries,
    the card catalogue, binderies, orreries under a starry vault, and (Restricted Section only) sealed archives of
    chained books. Loot **tomes**, fight the keepers: gargoyles and librarians attack on sight.
 3b. **Brush suspicious bookshelves** (they look like dusty bookshelves with one book out of place) with a vanilla brush to uncover a hidden item: often a tome, dust, or a book. They occur in the Library walls and stacks and in the tower.
-4. **Study** a tome (hold use). It teaches one enchantment at a mastery tier: Glimpsed, Studied or Mastered.
+4. **Study** a tome (hold use). It teaches one enchantment at a mastery tier: Glimpsed, Studied or Mastered. The tome
+   is used up, unless it would teach you nothing new.
 5. At an **Arcane Lectern** place gear and Lumen Dust, pick a known, compatible enchantment and **Inscribe**.
    The roll shows a power level. **Refine** to reroll and keep the better result (limited by mastery; a Quill of
-   Insight adds one more refinement and a roll bonus). **Accept** to bind it to the item.
-6. Spare enchanted gear goes to the **Deconstruction Table**: it is destroyed, teaches what it carries, returns dust.
+   Insight adds one more refinement and +6 to every roll, and wears out after 48 rolls). **Accept** to bind it to the item.
+6. Spare enchanted gear goes to the **Deconstruction Table**: it is destroyed, teaches what it carries (unknown
+   becomes Glimpsed; Glimpsed becomes Studied if the item had it at level III or its maximum), returns dust.
+   Mastered comes only from Mastered tomes.
 7. Past the 4th ring of cells lies the **Restricted Section**: darker, richer vaults, and the **Archivist** boss.
 
 The vanilla enchanting table is disabled by default (config `disableVanillaEnchantingTable`).
@@ -50,7 +55,7 @@ enchantment level (3 to 36).
 
 ## Content
 
-* Blocks: Arcane Lectern, Deconstruction Table, Inscribed Bricks (+ Chiseled), Lumen Lantern, Knowledge Shelf, Suspicious Bookshelf (brushable), Library Portal.
+* Blocks: Arcane Lectern, Deconstruction Table, Inscribed Bricks (+ Chiseled), Lumen Lantern, Knowledge Shelf (decorative), Library Bookshelf, Suspicious Bookshelf (brushable), Library Portal.
 * Items: Book of Portals, Ink Vial, Lumen Dust, Quill of Insight, Codex of the Learned, Archivist's Seal, Archivist's Bookmark (mark a spot, recall to it), Tomes (3 tiers, one per enchantment), spawn eggs.
 * Enchantments (data-driven): Lumen Step, Page Turn, Knowledge Leech, Ink Bound, Arcane Ward, Lumen Edge.
 * Mobs (ten, each with custom animated models and 3-4 variants that each have their own mechanic; the Restricted
@@ -108,3 +113,8 @@ ideas and finds to Discussions.
 
 `site/` is the GitHub Pages site, deployed by `.github/workflows/pages.yml` (set Settings > Pages > Source to GitHub Actions once).
 
+## Store pages
+
+The CurseForge text is `docs/store-description.md` (`docs/store-description-text.md` is the same without images,
+ready to paste; on CurseForge the cards go stacked at the top). The icon, cards and gallery images are in
+`docs/showcase/`.
